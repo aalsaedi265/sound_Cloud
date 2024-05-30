@@ -1,0 +1,13 @@
+
+makes app folder for django, main dir
+django-admin startproject music_controller
+
+inside music_controller
+django-admin startapp api
+
+
+py -m venv nameOfEnv
+.\env\Scripts\activate
+
+install everything you need all at once
+pip install -r .\requirments.txt
