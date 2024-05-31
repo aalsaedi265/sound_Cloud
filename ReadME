@@ -2,8 +2,16 @@
 makes app folder for django, main dir
 django-admin startproject music_controller
 
+
+## django-admin startapp api
 inside music_controller
-django-admin startapp api
+
+## django-admin startapp frontend
+will handle the react stuff
+staic for the stac bundles
+templates for more dynamic stuff
+src you know this
+
 
 init django database( less boiler plate code more fun code), you will see dn.sqlite3
 py .\manage.py makemigrations
@@ -16,7 +24,7 @@ py -m venv nameOfEnv
 .\env\Scripts\activate
 
 
-WHY serlizers matter in API
+## WHY serlizers matter in API
 converts complex data types ( querysets  model instances) into Python data types ( dictionaries) that can be rendered into JSON or XML, and vice versa
 
 
