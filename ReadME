@@ -15,5 +15,14 @@ py .\manage.py runserver
 py -m venv nameOfEnv
 .\env\Scripts\activate
 
+
+WHY serlizers matter in API
+converts complex data types ( querysets  model instances) into Python data types ( dictionaries) that can be rendered into JSON or XML, and vice versa
+
+
 install everything you need all at once
 pip install -r .\requirments.txt
+
+
+django use obj relational mapper which adds a layer of obtraction to datanases
+so we write py code and it interacts with the database makes life better
