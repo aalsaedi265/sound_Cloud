@@ -5,6 +5,12 @@ django-admin startproject music_controller
 inside music_controller
 django-admin startapp api
 
+init django database( less boiler plate code more fun code), you will see dn.sqlite3
+py .\manage.py makemigrations
+py .\manage.py migrate
+
+backend server running
+py .\manage.py runserver
 
 py -m venv nameOfEnv
 .\env\Scripts\activate
