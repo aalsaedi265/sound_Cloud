@@ -12,6 +12,34 @@ staic for the stac bundles
 templates for more dynamic stuff
 src you know this
 
+## npm init -y
+sets up the front edn like npm init for react
+
+## npm i webpack webpack-cli --save-dev
+installs Webpack and its CLI as development dependencies, which are essential for bundling and managing frontend assets
+
+## BABLE   npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+allows js code interact with all web browser without conflict
+this whole thing is configuration and making sure the front talks to the back, so think of it as really a lot of bolir plate code that must be here or nothing works
+# babel.config.json
+this optional, i was having a hard time and this help me over come it
+# webpack.config.js 
+transpile (bundle) everything. honestly just make create app it will be fast
+i did it the out dated way
+
+## scripts in package.json
+ "dev": "webpack --mode development --watch",
+ "build": "webpack --mode production"
+
+ needed both to make or will have run this in frontend dir every time we want to activate react
+
+## npm install @babel/plugin-proposal-class-properties
+insures not coflicts occure later on with asyn & await trust me bro you want this
+
+
+## front end stuff
+npm install @material-ui/core @material-ui/core react react-dom --save-dev
+npm install react-router-dom
 
 init django database( less boiler plate code more fun code), you will see dn.sqlite3
 py .\manage.py makemigrations
@@ -34,3 +62,5 @@ pip install -r .\requirments.txt
 
 django use obj relational mapper which adds a layer of obtraction to datanases
 so we write py code and it interacts with the database makes life better
+
+
