@@ -27,6 +27,8 @@ this optional, i was having a hard time and this help me over come it
 transpile (bundle) everything. honestly just make create app it will be fast
 i did it the out dated way
 
+npm install @babel/preset-react --save-dev
+
 ## scripts in package.json
  "dev": "webpack --mode development --watch",
  "build": "webpack --mode production"

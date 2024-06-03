@@ -1,5 +1,6 @@
 
 
+
 {
   "presets": [
     [
@@ -10,7 +11,9 @@
         }
       }
     ],
-    "@babel/preset-react"
+    "@babel/preset-react" // Include the preset for React JSX
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  "plugins": [
+    "@babel/plugin-proposal-class-properties" // Optional plugin for class properties
+  ]
 }
