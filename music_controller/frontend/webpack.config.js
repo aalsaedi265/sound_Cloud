@@ -57,6 +57,7 @@ module.exports = (env, argv) => {
       }),
     ],
     // The mode to use
-    mode: argv.mode,
+    mode: isProduction ? 'production' : 'development',
+    watch: !isProduction,
   };
 };

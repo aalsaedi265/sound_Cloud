@@ -11,9 +11,9 @@
         }
       }
     ],
-    "@babel/preset-react" // Include the preset for React JSX
+    "@babel/preset-react" 
   ],
   "plugins": [
-    "@babel/plugin-proposal-class-properties" // Optional plugin for class properties
+    "@babel/plugin-proposal-class-properties" 
   ]
 }

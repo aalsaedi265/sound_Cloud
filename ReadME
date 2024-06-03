@@ -47,8 +47,8 @@ init django database( less boiler plate code more fun code), you will see dn.sql
 py .\manage.py makemigrations
 py .\manage.py migrate
 
-backend server running
-py .\manage.py runserver
+backend server running, you need this before running dev on the front end
+## py .\manage.py runserver
 
 py -m venv nameOfEnv
 .\env\Scripts\activate
