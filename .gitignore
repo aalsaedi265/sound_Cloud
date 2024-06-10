@@ -1,4 +1,7 @@
 
 /env
+<<<<<<< HEAD
 /music_controller/node_modules
+=======
+>>>>>>> 7c677ca2472e79b1d7ba4ac9d39b18c9fb189be2
 /music_controller/frontend/node_modules
