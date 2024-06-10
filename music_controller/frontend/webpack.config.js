@@ -19,7 +19,7 @@ module.exports = (env, argv) => {
       // The output path for the compiled files
       path: path.resolve(__dirname, './static/frontend'),
       // The filename for the output file
-      filename: '[name].js',
+      filename: 'main.js',
     },
     // The module configuration for webpack
     module: {
@@ -37,6 +37,10 @@ module.exports = (env, argv) => {
             },
           },
         },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        }
       ],
     },
     // The resolve configuration for webpack
