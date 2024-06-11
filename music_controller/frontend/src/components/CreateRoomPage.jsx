@@ -15,10 +15,23 @@ export default function CreateRoomPage() {
         setVotesToSkip(e.target.value);
     }
 
-    function handleSubmit(e){
-        e.preventDefault();
-        console.log({votesToSkip, guestPause})
-    }
+    function handleSubmit(){
+        // e.preventDefault();
+        //console.log({ votesToSkip, guestPause })
+        
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                votes_to_skip: votesToSkip,
+                guest_can_pause: guestPause
+            })
+        };
+        fetch('/api/create-room', requestOptions)
+            .then(response => response.json())
+            .then(data => console.log(data));
+        }
+    
 
     return (
         <div id="create-room-page">  
