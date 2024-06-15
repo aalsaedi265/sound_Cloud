@@ -1,9 +1,7 @@
 
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./HomePage.jsx";
-import CreateRoomPage from "./CreateRoomPage.jsx";
-import RoomJoinPage from "./RoomJoinPage.jsx";
+import { HomePage, CreateRoomPage, RoomJoinPage, Room } from  "./comp.js";
 
 function App() {
   return (
@@ -11,6 +9,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/create" element={<CreateRoomPage />} />
       <Route path="/join" element={<RoomJoinPage />} />
+      <Route path="/room/:roomCode" element={<Room />} />
     </Routes>
   );
 }

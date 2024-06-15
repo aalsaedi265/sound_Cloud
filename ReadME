@@ -40,7 +40,7 @@ insures not coflicts occure later on with asyn & await trust me bro you want thi
 
 
 ## front end stuff
-npm install @material-ui/core @material-ui/core react react-dom --save-dev
+npm install react react-dom --save-dev
 npm install react-router-dom
 
 init django database( less boiler plate code more fun code), you will see dn.sqlite3
@@ -66,3 +66,18 @@ django use obj relational mapper which adds a layer of obtraction to datanases
 so we write py code and it interacts with the database makes life better
 
 
+## API stuff
+127.0.0.1:8000   local host
+api access to url of the backend
+
+the frontend urls don't need any special command before calling because they are set to ''
+
+        urlpatterns = [
+            path('admin/', admin.site.urls),
+            path('api/', include('api.urls')),
+            path('', include('frontend.urls'))
+
+        ]
+
+
+http://127.0.0.1:8000/api/get-room?code=     this is how we get the room code
