@@ -1,83 +1,49 @@
+# Setting up Django and React projects
 
-makes app folder for django, main dir
-django-admin startproject music_controller
+## Setting up Django project
+- Create a new Django project: `django-admin startproject music_controller`
+- Inside the project directory, create an app for the API: `python manage.py startapp api`
+- Inside the project directory, create another app for the frontend: `python manage.py startapp frontend`
 
+## Setting up React frontend
+- Initialize a new React project: `npx create-react-app frontend`
+- Move into the frontend directory: `cd frontend`
+- Install required dependencies: `npm install react react-dom react-router-dom`
+- Create a `webpack.config.js` file and configure Webpack for the frontend assets.
+- Create a `babel.config.js` file and configure Babel for the frontend code.
 
-## django-admin startapp api
-inside music_controller
+## Running the projects
+- Run the Django server: `python manage.py runserver`
+- Run the React development server: `npm start`
 
-## django-admin startapp frontend
-will handle the react stuff
-staic for the stac bundles
-templates for more dynamic stuff
-src you know this
+## Django backend
+- Create Django models and views for the API.
+- Create Django URLs for the API.
+- Configure the Django project's settings.
 
-## npm init -y
-sets up the front edn like npm init for react
+## React frontend
+- Create React components for the frontend.
+- Create React routes for different pages.
+- Configure the React app's entry point.
 
-## npm i webpack webpack-cli --save-dev
-installs Webpack and its CLI as development dependencies, which are essential for bundling and managing frontend assets
+## Serializers
+- Serializers convert complex data types (querysets, model instances) into Python data types (dictionaries) that can be rendered into JSON or XML, and vice versa.
 
-## BABLE   npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
-allows js code interact with all web browser without conflict
-this whole thing is configuration and making sure the front talks to the back, so think of it as really a lot of bolir plate code that must be here or nothing works
-# babel.config.json
-this optional, i was having a hard time and this help me over come it
-# webpack.config.js 
-transpile (bundle) everything. honestly just make create app it will be fast
-i did it the out dated way
+## Dependencies
+- Install all required dependencies using `pip install -r requirements.txt`
 
-npm install @babel/preset-react --save-dev
+## Database
+- Initialize the Django database: `python manage.py makemigrations` and `python manage.py migrate`
 
-## scripts in package.json
- "dev": "webpack --mode development --watch",
- "build": "webpack --mode production"
+## API
+- Access the API using the URL: `http://127.0.0.1:8000/api/get-room?code=`
 
- needed both to make or will have run this in frontend dir every time we want to activate react
+## Notes
+- The `webpack.config.js` and `babel.config.js` files can be generated using Create React App.
+- The `npm start` command will start the React development server with hot module replacement (HMR).
+- The `npm run build` command will create a production build of the React app.
+- The Django server runs on `http://127.0.0.1:8000` by default.
+- The React app runs on `http://localhost:3000` by default.
+- The API endpoints are defined in the `api/urls.py` file.
+- The frontend routes are defined in the `frontend/src/App.jsx` file.
 
-## npm install @babel/plugin-proposal-class-properties
-insures not coflicts occure later on with asyn & await trust me bro you want this
-
-
-## front end stuff
-npm install react react-dom --save-dev
-npm install react-router-dom
-
-init django database( less boiler plate code more fun code), you will see dn.sqlite3
-py .\manage.py makemigrations
-py .\manage.py migrate
-
-backend server running, you need this before running dev on the front end
-## py .\manage.py runserver
-
-py -m venv nameOfEnv
-.\env\Scripts\activate
-
-
-## WHY serlizers matter in API
-converts complex data types ( querysets  model instances) into Python data types ( dictionaries) that can be rendered into JSON or XML, and vice versa
-
-
-install everything you need all at once
-pip install -r .\requirments.txt
-
-
-django use obj relational mapper which adds a layer of obtraction to datanases
-so we write py code and it interacts with the database makes life better
-
-
-## API stuff
-127.0.0.1:8000   local host
-api access to url of the backend
-
-the frontend urls don't need any special command before calling because they are set to ''
-
-        urlpatterns = [
-            path('admin/', admin.site.urls),
-            path('api/', include('api.urls')),
-            path('', include('frontend.urls'))
-
-        ]
-
-
-http://127.0.0.1:8000/api/get-room?code=     this is how we get the room code

@@ -4,6 +4,9 @@ import '../../static/css/CreateRoomPage.css'
 import { Link } from "react-router-dom";
 
 export default function CreateRoomPage() {
+
+    console.log('create room mounted');
+
     const [votesToSkip, setVotesToSkip] = useState(2);
     const [guestPause, setGuestPause] = useState(true);
 
@@ -35,7 +38,7 @@ export default function CreateRoomPage() {
 
     return (
         <div id="create-room-page">  
-            <h1> Create Room Page </h1>
+            <h1> Create Rogggggggggggggom Page </h1>
             <div className="form-group">
                 <label> Control Options</label>
                 <div>
